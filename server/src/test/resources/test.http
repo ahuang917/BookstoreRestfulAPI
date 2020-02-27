@@ -1,0 +1,131 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/AlanBookstoreOrder/api/categories
+Accept: application/json
+
+###
+
+# curl 'http://localhost:8080/AlanBookstoreOrder/api/orders' -X OPTIONS -H 'Connection: keep-alive' -H 'Access-Control-Request-Method: POST' -H 'Origin: http://localhost:8081' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36' -H 'Access-Control-Request-Headers: content-type' -H 'Accept: */*' -H 'Sec-Fetch-Site: same-site' -H 'Sec-Fetch-Mode: cors' -H 'Referer: http://localhost:8081/AlanBookstoreOrder/checkout' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --compressed ;
+#curl 'http://localhost:8080/AlanBookstoreOrder/api/orders' -H 'Connection: keep-alive' -H 'Origin: http://localhost:8081' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36' -H 'Content-Type: application/json' -H 'Accept: */*' -H 'Sec-Fetch-Site: same-site' -H 'Sec-Fetch-Mode: cors' -H 'Referer: http://localhost:8081/AlanBookstoreOrder/checkout' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --data-binary '{"cart":{"items":[{"book":{"bookId":1001,"title":"Living with Art","author":"Mark Getlein","price":145,"categoryId":1001,"public":true},"quantity":1},{"book":{"bookId":1004,"title":"A World of Art","author":"Henry M Sayre","price":5728,"categoryId":1001,"public":false},"quantity":1},{"book":{"bookId":1002,"title":"Film Art: An Introduction","author":"Professor David Bordwell","price":99,"categoryId":1001,"public":false},"quantity":1}]},"customerForm":{"name":"Alan Huang","address":"12827 Matey Road","phone":"3017064159","email":"ahuang917@gmail.com","ccNumber":"4444333322221111","ccExpiryMonth":11,"ccExpiryYear":2027}}' --compressed
+POST http://localhost:8080/AlanBookstoreOrder/api/orders
+Connection: keep-alive
+Access-Control-Request-Method: POST
+Origin: http://localhost:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Access-Control-Request-Headers: content-type
+Accept: */*
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8081/AlanBookstoreOrder/checkout
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Connection: keep-alive
+Origin: http://localhost:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8081/AlanBookstoreOrder/checkout
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1001,
+          "title": "Living with Art",
+          "author": "Mark Getlein",
+          "price": 145,
+          "categoryId": 1001,
+          "public": true
+        },
+        "quantity": 1
+      },
+      {
+        "book": {
+          "bookId": 1004,
+          "title": "A World of Art",
+          "author": "Henry M Sayre",
+          "price": 5728,
+          "categoryId": 1001,
+          "public": false
+        },
+        "quantity": 1
+      },
+      {
+        "book": {
+          "bookId": 1002,
+          "title": "Film Art: An Introduction",
+          "author": "Professor David Bordwell",
+          "price": 99,
+          "categoryId": 1001,
+          "public": false
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "",
+    "address": "1238",
+    "phone": "(301)706-4159",
+    "email": "ahuang917@gmal.com",
+    "ccNumber": "4444-333322221111",
+    "ccExpiryMonth": 11,
+    "ccExpiryYear": 2027
+  }
+}
+
+###
+
+# curl 'http://localhost:8080/AlanBookstoreOrder/api/orders' -H 'Connection: keep-alive' -H 'Origin: http://localhost:8080' -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36' -H 'Content-Type: application/json' -H 'Accept: */*' -H 'Sec-Fetch-Site: same-origin' -H 'Sec-Fetch-Mode: cors' -H 'Referer: http://localhost:8080/AlanBookstoreOrder/checkout' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9' --data-binary '{"cart":{"items":[{"book":{"bookId":1001,"title":"Living with Art","author":"Mark Getlein","price":145,"categoryId":1001,"public":true},"quantity":1}]},"customerForm":{"name":"Alan Huang","address":"12827 Matey Road","phone":"3017064159","email":"ahuang917@gmail.com","ccNumber":"4444333322221111","ccExpiryMonth":11,"ccExpiryYear":2026}}' --compressed
+POST http://localhost:8080/AlanBookstoreOrder/api/orders
+Connection: keep-alive
+Origin: http://localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Referer: http://localhost:8080/AlanBookstoreOrder/checkout
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1001,
+          "title": "Living with Art",
+          "author": "Mark Getlein",
+          "price": 145,
+          "categoryId": 1001,
+          "public": true
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "Aaal",
+    "address": "12827 Matey Road",
+    "phone": "32017064159",
+    "email": "ahuang917@gmail.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 11,
+    "ccExpiryYear": 2026
+  }
+}
+
+###
+
