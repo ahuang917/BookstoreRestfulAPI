@@ -1,5 +1,5 @@
 # BookstoreRestfulAPI
-My RESTful bookstore web application
+My RESTful bookstore web application. README is still a WIP
 
 ## Requirements
 Apache Tomcat 9.0 or higher
